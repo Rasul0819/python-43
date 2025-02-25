@@ -13,7 +13,9 @@ dp  =Dispatcher()
 async def send_hi(sms:types.Message):
     await sms.answer(text='Assalamu aleykum')
 
-
+@dp.message(Command('info'))
+async def send_info(sms:types.Message):
+    await sms.answer('bul bot misal ushin islendi')
 
 
 async def main():
